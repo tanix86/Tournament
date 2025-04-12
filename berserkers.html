@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>eSports Tournament Schedule & Points Table</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .rules-box {
+      background-color: #ffeaa7;
+      border-left: 5px solid #fdcb6e;
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .rules-box h3 {
+      margin-top: 0;
+      color: #d35400;
+    }
+
+    .rules-box ul {
+      list-style-type: "➤ ";
+      padding-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    .match, table {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      margin: 10px 0;
+    }
+
+    .match {
+      font-weight: bold;
+      border-left: 5px solid #6c5ce7;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #6c5ce7;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    td[contenteditable="true"] {
+      background-color: #fefefe;
+      cursor: text;
+    }
+
+    td[contenteditable="false"] {
+      background-color: #f6f6f6;
+    }
+
+    .highlight {
+      background-color: #a7d8f1 !important; /* Light Blue Highlight */
+      color: black;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🎮 eSports Tournament Schedule</h1>
+
+    <div class="rules-box">
+      <h3>📜 RULES</h3>
+      <ul>
+        <li>NO ROOF TOP</li>
+        <li>GUN SKIN, CHAR SKILL AND LOAD OUTS OFF</li>
+        <li>FACE TO FACE</li>
+        <li>NO TURRETS</li>
+        <li>NO GRENADES / FLASH FREEZE</li>
+        <li>NO WALL BREAKING</li>
+      </ul>
+
+      <h3>🧾 INSTRUCTIONS</h3>
+      <ul>
+        <li>You get 1 point for winning 1 round</li>
+        <li>4 Players with the most points get selected for semi-finals</li>
+        <li>1st position vs 3rd position → winner qualifies for finals</li>
+        <li>2nd position vs 4th position → winner qualifies for finals</li>
+      </ul>
+    </div>
+
+    <h2>🗓 Match Schedule</h2>
+
+    <div class="match">Match 1: Sukuna vs BB jack</div>
+    <div class="match">Match 2: Shadow vs Sanju</div>
+    <div class="match">Match 3: Nxt vs Mortal</div>
+    <div class="match">Match 4: Nish vs Evil</div>
+    <div class="match">Match 5: OP master vs BB jack</div>
+    <div class="match">Match 6: Sukuna vs Shadow</div>
+    <div class="match">Match 7: Nxt vs Nish</div>
+    <div class="match">Match 8: Mortal vs Evil</div>
+    <div class="match">Match 9: OP master vs Sanju</div>
+    <div class="match">Match 10: BB jack vs Nxt</div>
+    <div class="match">Match 11: Nish vs Sukuna</div>
+    <div class="match">Match 12: Shadow vs OP master</div>
+    <div class="match">Match 13: Sanju vs Mortal</div>
+
+    <h2>📊 Points Table</h2>
+
+    <table id="pointsTable">
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th>Matches Played</th>
+          <th>Wins</th>
+          <th>Losses</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-id="Sukuna"><td contenteditable="false">Sukuna</td><td contenteditable="true">0</td><td contenteditable="true">0</td><td contenteditable="true">0</td><td contenteditable="true">0</td></tr>
+        <tr data-id="Shadow"><td contenteditable="false">Shadow</td><td contenteditable="true">0</td><td contenteditable="true">0</td><td contenteditable="true">0</td><td contenteditable="true">0</td></tr>
+        <tr data-id="Nxt"><td contenteditable="false">Nxt</td><td contenteditable="true">0</td><td contenteditable="true">0</td><td contenteditable="true">0</td><td contenteditable="true">0</td></tr>
+        <tr data-id="Nish"><td contenteditable="false">Nish</td><td contenteditable="true">0</td><td contenteditable="true">0</td><td contenteditable="true">0</td><td contenteditable="true">0</td></tr>
+        <tr data-id="Mortal"><td contenteditable="false">Mortal</td><td contenteditable="true">0</td><td contenteditable="true">0</td><td contenteditable="true">0</td><td contenteditable="true">0</td></tr>
+        <tr data-id="OP master"><td contenteditable="false">OP master</td><td contenteditable="true">0</td><td contenteditable="true">0</td><td contenteditable="true">0</td><td contenteditable="true">0</td></tr>
+        <tr data-id="Evil"><td contenteditable="false">Evil</td><td contenteditable="true">0</td><td contenteditable="true">0</td><td contenteditable="true">0</td><td contenteditable="true">0</td></tr>
+        <tr data-id="Sanju"><td contenteditable="false">Sanju</td><td contenteditable="true">0</td><td contenteditable="true">0</td><td contenteditable="true">0</td><td contenteditable="true">0</td></tr>
+        <tr data-id="BB jack"><td contenteditable="false">BB jack</td><td contenteditable="true">0</td><td contenteditable="true">0</td><td contenteditable="true">0</td><td contenteditable="true">0</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    const correctPassword = "tanixdagoat2008"; // Password to edit the table
+
+    // Prompt for password
+    const enteredPassword = prompt("Please enter the password to edit the table:");
+    if (enteredPassword !== correctPassword) {
+      alert("Incorrect password. You can only view the table.");
+      // Disable content editing for everyone else
+      const editableCells = document.querySelectorAll('[contenteditable="true"]');
+      editableCells.forEach(cell => cell.setAttribute("contenteditable", "false"));
+    }
+
+    const table = document.getElementById("pointsTable");
+    const tbody = table.querySelector("tbody");
+
+    // Load, save, and sort data functions
+    function loadTableData() {
+      const storedData = JSON.parse(localStorage.getItem('pointsTableData'));
+      if (storedData) {
+        const rows = Array.from(tbody.rows);
+        storedData.forEach((data, index) => {
+          const row = rows.find(r => r.getAttribute("data-id") === data.playerId);
+          if (row) {
+            row.cells[1].innerText = data.matchesPlayed;
+            row.cells[2].innerText = data.wins;
+            row.cells[3].innerText = data.losses;
+            row.cells[4].innerText = data.points;
+          }
+        });
+      }
+      sortAndHighlight();
+    }
+
+    function saveTableData() {
+      const rows = Array.from(tbody.rows);
+      const tableData = rows.map(row => ({
+        playerId: row.getAttribute("data-id"),
+        matchesPlayed: row.cells[1].innerText,
+        wins: row.cells[2].innerText,
+        losses: row.cells[3].innerText,
+        points: row.cells[4].innerText,
+      }));
+      localStorage.setItem('pointsTableData', JSON.stringify(tableData));
+    }
+
+    function sortAndHighlight() {
+      const rows = Array.from(tbody.rows);
+      rows.sort((a, b) => {
+        const pointsA = parseInt(a.cells[4].innerText) || 0;
+        const pointsB = parseInt(b.cells[4].innerText) || 0;
+        return pointsB - pointsA;
+      });
+
+      // Remove all highlight classes
+      rows.forEach(row => row.classList.remove("highlight"));
+
+      // Highlight top 4 players
+      rows.slice(0, 4).forEach(row => row.classList.add("highlight"));
+
+      // Reorder the table rows
+      rows.forEach(row => tbody.appendChild(row));
+
+      saveTableData();
+    }
+
+    loadTableData();
+
+    tbody.addEventListener("input", () => {
+      sortAndHighlight();
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
