@@ -1,153 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Duo Tournament</title>
+  <meta charset="UTF-8">
+  <title>Duo Tournament | Schedule & Points Table</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
       margin: 0;
-      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9fb;
+      color: #333;
     }
-    h1, h2, h3 {
+
+    header {
+      background: linear-gradient(90deg, #7f5af0, #6246ea);
+      padding: 1rem 2rem;
+      color: white;
       text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
-    .box {
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
       background: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
       border-radius: 10px;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 800px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
+
+    .section-title {
+      font-size: 1.5rem;
+      color: #7f5af0;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.5rem;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 10px;
+      margin-bottom: 2rem;
     }
+
     th, td {
-      padding: 10px;
-      border: 1px solid #ccc;
+      border: 1px solid #ddd;
+      padding: 0.8rem;
       text-align: center;
     }
+
     th {
-      background-color: #007BFF;
+      background: #7f5af0;
       color: white;
+      font-weight: bold;
     }
-    tr.highlight {
-      background-color: #d0ecff !important;
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
     }
-    .password-box {
-      text-align: center;
-      margin-bottom: 20px;
+
+    .rules-box {
+      background: #f3f0ff;
+      border: 1px solid #dcd6ff;
+      padding: 1rem;
+      border-radius: 8px;
+      line-height: 1.6;
+    }
+
+    .rules-box li::before {
+      content: "✔️ ";
+    }
+
+    .team {
+      font-weight: bold;
     }
   </style>
 </head>
+
 <body>
-  <div class="box">
-    <h1>Duo Tournament</h1>
-    <h3>RULES</h3>
-    <ul>
-      <li>NO ROOF TOP</li>
-      <li>GUN SKIN, CHAR SKILL AND LOAD OUTS OFF</li>
-      <li>FACE TO FACE</li>
-      <li>NO TURRETS</li>
-      <li>NO GRENADES/FLASH FREEZE</li>
-      <li>NO WALL BREAKING</li>
-    </ul>
-    <h3>INSTRUCTIONS</h3>
-    <ul>
-      <li>You get 1 point for 1 kill</li>
-      <li>Top 4 teams with most points go to semi-finals</li>
-      <li>1st vs 3rd and 2nd vs 4th (winners go to final)</li>
-    </ul>
-  </div>
+  <header>
+    <h1>🔥 Duo Tournament: Schedule & Points Table 🔥</h1>
+  </header>
 
-  <div class="box">
-    <h2>Match Fixtures</h2>
+  <div class="container">
+    <h2 class="section-title">📋 Rules & Instructions</h2>
+    <ul class="rules-box">
+      <li>Total 5 teams. Each team will play against all other teams (round-robin format).</li>
+      <li>Each match will be 2v2 (duo).</li>
+      <li><strong>1 kill = 1 point</strong></li>
+      <li>Top teams will be decided based on total points.</li>
+      <li>Make sure to report scores after each match to the admin.</li>
+    </ul>
+
+    <h2 class="section-title">📅 Fixtures</h2>
     <table>
-      <tr><th>Match</th><th>Team 1</th><th>Team 2</th></tr>
-      <tr><td>1</td><td>Team A</td><td>Team B</td></tr>
-      <tr><td>2</td><td>Team A</td><td>Team C</td></tr>
-      <tr><td>3</td><td>Team A</td><td>Team D</td></tr>
-      <tr><td>4</td><td>Team A</td><td>Team E</td></tr>
-      <tr><td>5</td><td>Team B</td><td>Team C</td></tr>
-      <tr><td>6</td><td>Team B</td><td>Team D</td></tr>
-      <tr><td>7</td><td>Team B</td><td>Team E</td></tr>
-      <tr><td>8</td><td>Team C</td><td>Team D</td></tr>
-      <tr><td>9</td><td>Team C</td><td>Team E</td></tr>
-      <tr><td>10</td><td>Team D</td><td>Team E</td></tr>
+      <tr>
+        <th>Match No</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+      </tr>
+      <tr><td>1</td><td>Comebackers💥</td><td>Thee poriis🔥</td></tr>
+      <tr><td>2</td><td>Comebackers💥</td><td>Master minds🦾</td></tr>
+      <tr><td>3</td><td>Comebackers💥</td><td>⚡Demolishers⚡</td></tr>
+      <tr><td>4</td><td>Comebackers💥</td><td>Red dragon 🐉</td></tr>
+      <tr><td>5</td><td>Thee poriis🔥</td><td>Master minds🦾</td></tr>
+      <tr><td>6</td><td>Thee poriis🔥</td><td>⚡Demolishers⚡</td></tr>
+      <tr><td>7</td><td>Thee poriis🔥</td><td>Red dragon 🐉</td></tr>
+      <tr><td>8</td><td>Master minds🦾</td><td>⚡Demolishers⚡</td></tr>
+      <tr><td>9</td><td>Master minds🦾</td><td>Red dragon 🐉</td></tr>
+      <tr><td>10</td><td>⚡Demolishers⚡</td><td>Red dragon 🐉</td></tr>
     </table>
-  </div>
 
-  <div class="box">
-    <h2>Points Table</h2>
-    <div class="password-box">
-      <label>Password to Edit: <input type="password" id="passwordInput" /></label>
-      <button onclick="checkPassword()">Unlock Editing</button>
-    </div>
-    <table id="pointsTable">
+    <h2 class="section-title">📊 Points Table</h2>
+    <table>
       <thead>
         <tr>
           <th>Team</th>
-          <th>Players</th>
+          <th>Matches Played</th>
+          <th>Wins</th>
+          <th>Losses</th>
+          <th>Kills</th>
           <th>Points</th>
         </tr>
       </thead>
       <tbody>
-        <tr><td>Team A</td><td>Rocky & Evil</td><td contenteditable="false">0</td></tr>
-        <tr><td>Team B</td><td>BB jack & OP master</td><td contenteditable="false">0</td></tr>
-        <tr><td>Team C</td><td>Sukuna & Nish</td><td contenteditable="false">0</td></tr>
-        <tr><td>Team D</td><td>Shadow & Rithik</td><td contenteditable="false">0</td></tr>
-        <tr><td>Team E</td><td>Sanju & Mortal</td><td contenteditable="false">0</td></tr>
+        <tr><td class="team">Comebackers💥</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td class="team">Thee poriis🔥</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td class="team">Master minds🦾</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td class="team">⚡Demolishers⚡</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        <tr><td class="team">Red dragon 🐉</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
       </tbody>
     </table>
   </div>
-
-  <script>
-    const correctPassword = 'tanixdagoat2008';
-    function checkPassword() {
-      const input = document.getElementById('passwordInput').value;
-      if (input === correctPassword) {
-        const cells = document.querySelectorAll('#pointsTable td:nth-child(3)');
-        cells.forEach(cell => cell.setAttribute('contenteditable', 'true'));
-        alert('Editing unlocked! Don’t forget to save changes locally.');
-      } else {
-        alert('Wrong password');
-      }
-    }
-
-    function sortTableAndHighlight() {
-      const table = document.getElementById('pointsTable');
-      let rows = Array.from(table.tBodies[0].rows);
-
-      rows.sort((a, b) => {
-        return parseInt(b.cells[2].innerText) - parseInt(a.cells[2].innerText);
-      });
-
-      rows.forEach((row, index) => {
-        table.tBodies[0].appendChild(row);
-        row.classList.toggle('highlight', index < 4);
-      });
-    }
-
-    window.addEventListener('load', () => {
-      const cells = document.querySelectorAll('#pointsTable td:nth-child(3)');
-
-      cells.forEach(cell => {
-        cell.addEventListener('input', () => {
-          localStorage.setItem(cell.parentElement.cells[0].innerText, cell.innerText);
-          sortTableAndHighlight();
-        });
-
-        const saved = localStorage.getItem(cell.parentElement.cells[0].innerText);
-        if (saved !== null) cell.innerText = saved;
-      });
-
-      sortTableAndHighlight();
-    });
-  </script>
 </body>
+
 </html>
