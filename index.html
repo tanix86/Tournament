@@ -55,17 +55,15 @@
     tr:nth-child(even) {
       background-color: #f2f2f2;
     }
-    .password-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+    .editable {
+      background-color: #ffffdd;
+    }
+    .password-prompt {
+      margin-bottom: 1rem;
     }
     input[type="password"] {
       padding: 0.5rem;
       font-size: 1rem;
-      margin-bottom: 1rem;
       border: 1px solid #ccc;
       border-radius: 5px;
     }
@@ -80,63 +78,83 @@
   </style>
 </head>
 <body>
-  <div id="auth">
-    <div class="password-section">
-      <h2>Enter Password to View Tournament</h2>
-      <input type="password" id="passwordInput" placeholder="Enter Password">
-      <button onclick="checkPassword()">Submit</button>
-      <p id="error" style="color:red;"></p>
+  <header>
+    <h1>Duo Tournament</h1>
+  </header>
+
+  <section class="instructions">
+    <h2>📜 Rules & Instructions</h2>
+    <ul>
+      <li>Every team will play against each other (round-robin format).</li>
+      <li>Each match awards kills which count as points.</li>
+      <li><strong>Scoring:</strong> <span style="background: white; color: #6c63ff; padding: 0.2rem 0.5rem; border-radius: 5px;">1 kill = 1 point</span></li>
+      <li>Team with highest total points wins.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>📅 Fixtures</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Match</th>
+          <th>Team A</th>
+          <th>Team B</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Comebackers💥</td><td>Thee poriis🔥</td></tr>
+        <tr><td>2</td><td>Comebackers💥</td><td>Master minds🦾</td></tr>
+        <tr><td>3</td><td>Comebackers💥</td><td>⚡Demolishers⚡</td></tr>
+        <tr><td>4</td><td>Comebackers💥</td><td>Red dragon 🐉</td></tr>
+        <tr><td>5</td><td>Thee poriis🔥</td><td>Master minds🦾</td></tr>
+        <tr><td>6</td><td>Thee poriis🔥</td><td>⚡Demolishers⚡</td></tr>
+        <tr><td>7</td><td>Thee poriis🔥</td><td>Red dragon 🐉</td></tr>
+        <tr><td>8</td><td>Master minds🦾</td><td>⚡Demolishers⚡</td></tr>
+        <tr><td>9</td><td>Master minds🦾</td><td>Red dragon 🐉</td></tr>
+        <tr><td>10</td><td>⚡Demolishers⚡</td><td>Red dragon 🐉</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>📊 Points Table</h2>
+    <div class="password-prompt">
+      <input type="password" id="editPassword" placeholder="Enter password to edit">
+      <button onclick="enableEditing()">Unlock Editing</button>
     </div>
-  </div>
-  <div id="content" style="display:none">
-    <header>
-      <h1>Duo Tournament</h1>
-    </header>
-
-    <section class="instructions">
-      <h2>📜 Rules & Instructions</h2>
-      <ul>
-        <li>Every team will play against each other (round-robin format).</li>
-        <li>Each match awards kills which count as points.</li>
-        <li><strong>Scoring:</strong> <span style="background: white; color: #6c63ff; padding: 0.2rem 0.5rem; border-radius: 5px;">1 kill = 1 point</span></li>
-        <li>Team with highest total points wins.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>📊 Points Table</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Team</th>
-            <th>Players</th>
-            <th>Matches Played</th>
-            <th>Wins</th>
-            <th>Losses</th>
-            <th>Kills</th>
-            <th>Points</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Comebackers💥</td><td>Rocky & Evil</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-          <tr><td>Thee poriis🔥</td><td>BB jack & OP master</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-          <tr><td>Master minds🦾</td><td>Sukuna & Nish</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-          <tr><td>⚡Demolishers⚡</td><td>Shadow & Rithik</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-          <tr><td>Red dragon 🐉</td><td>Sanju & Mortal</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
-        </tbody>
-      </table>
-    </section>
-  </div>
+    <table id="pointsTable">
+      <thead>
+        <tr>
+          <th>Team</th>
+          <th>Players</th>
+          <th>Matches Played</th>
+          <th>Wins</th>
+          <th>Losses</th>
+          <th>Kills</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Comebackers💥</td><td>Rocky & Evil</td><td contenteditable="false">0</td><td contenteditable="false">0</td><td contenteditable="false">0</td><td contenteditable="false">0</td><td contenteditable="false">0</td></tr>
+        <tr><td>Thee poriis🔥</td><td>BB jack & OP master</td><td contenteditable="false">0</td><td contenteditable="false">0</td><td contenteditable="false">0</td><td contenteditable="false">0</td><td contenteditable="false">0</td></tr>
+        <tr><td>Master minds🦾</td><td>Sukuna & Nish</td><td contenteditable="false">0</td><td contenteditable="false">0</td><td contenteditable="false">0</td><td contenteditable="false">0</td><td contenteditable="false">0</td></tr>
+        <tr><td>⚡Demolishers⚡</td><td>Shadow & Rithik</td><td contenteditable="false">0</td><td contenteditable="false">0</td><td contenteditable="false">0</td><td contenteditable="false">0</td><td contenteditable="false">0</td></tr>
+        <tr><td>Red dragon 🐉</td><td>Sanju & Mortal</td><td contenteditable="false">0</td><td contenteditable="false">0</td><td contenteditable="false">0</td><td contenteditable="false">0</td><td contenteditable="false">0</td></tr>
+      </tbody>
+    </table>
+  </section>
 
   <script>
-    function checkPassword() {
-      const input = document.getElementById('passwordInput').value;
-      const error = document.getElementById('error');
-      if (input === 'tanixdagoat2008') {
-        document.getElementById('auth').style.display = 'none';
-        document.getElementById('content').style.display = 'block';
+    function enableEditing() {
+      const pw = document.getElementById('editPassword').value;
+      if (pw === 'tanixdagoat2008') {
+        document.querySelectorAll('#pointsTable td:nth-child(n+3)').forEach(cell => {
+          cell.contentEditable = "true";
+          cell.classList.add("editable");
+        });
       } else {
-        error.textContent = "Incorrect password. Try again.";
+        alert("Incorrect password");
       }
     }
   </script>
